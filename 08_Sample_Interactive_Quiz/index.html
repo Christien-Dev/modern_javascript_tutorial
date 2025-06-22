@@ -1,0 +1,146 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <title>Sample Quiz</title>
+</head>
+<body>
+  <!-- Top Section -->
+  <div class="intro py-3 bg-white text-center">
+    <div class="container">
+      <h2 class="text-primary display-3 my-4">Wow Quiz</h2>    
+    </div>
+  </div>
+
+  <!-- Result Section -->
+  <div class="result py-4 d-none bg-light text-center">
+    <div class="container lead">
+      <p>You scored <span class="text-primary display-4 p-3">0%</span></p>
+    </div>
+  </div>
+
+  <!-- Quiz Section -->
+  <div class="quiz py-4 bg-primary">
+    <div class="container">
+      <h2 class="my-5 text-white">On with the questions</h2>
+
+      <form class="quiz-form text-light">
+        
+        <!-- Azeroth -->
+        <div class="my-5">
+          <p class="lead font-weight-normal">1. What is the name of the world where most of the game takes place?</p>
+          <div class="form-check my-2 text-white-50">
+            <input type="radio" name="q1" value="A" checked>
+            <label class="form-check-label">Tamriel</label>
+          </div>
+          <div class="form-check my-2 text-white-50">
+            <input type="radio" name="q1" value="B">
+            <label class="form-check-label">Azeroth</label>
+          </div>
+          <div class="form-check my-2 text-white-50">
+            <input type="radio" name="q1" value="C">
+            <label class="form-check-label">Hyrule</label>
+          </div>
+          <div class="form-check my-2 text-white-50">
+            <input type="radio" name="q1" value="D">
+            <label class="form-check-label">Runeterra</label>
+          </div>
+        </div>
+
+        <!-- Alliance and Horde -->
+        <div class="my-5">
+          <p class="lead font-weight-normal">2. Which two main factions are players divided into?</p>
+          <div class="form-check my-2 text-white-50">
+            <input type="radio" name="q2" value="A" checked>
+            <label class="form-check-label">Knights and Raiders</label>
+          </div>
+          <div class="form-check my-2 text-white-50">
+            <input type="radio" name="q2" value="B">
+            <label class="form-check-label">Mages and Warriors</label>
+          </div>
+          <div class="form-check my-2 text-white-50">
+            <input type="radio" name="q2" value="C">
+            <label class="form-check-label">Alliance and Horde</label>
+          </div>
+          <div class="form-check my-2 text-white-50">
+            <input type="radio" name="q2" value="D">
+            <label class="form-check-label">Humans and Orcs</label>
+          </div>
+        </div>
+
+        <!-- All of the Above -->
+        <div class="my-5">
+          <p class="lead font-weight-normal">3. Which of these is a playable race in World of Warcraft?</p>
+          <div class="form-check my-2 text-white-50">
+            <input type="radio" name="q3" value="A" checked>
+            <label class="form-check-label">Goblin</label>
+          </div>
+          <div class="form-check my-2 text-white-50">
+            <input type="radio" name="q3" value="B">
+            <label class="form-check-label">Gnome</label>
+          </div>
+          <div class="form-check my-2 text-white-50">
+            <input type="radio" name="q3" value="C">
+            <label class="form-check-label">Orc</label>
+          </div>
+          <div class="form-check my-2 text-white-50">
+            <input type="radio" name="q3" value="D">
+            <label class="form-check-label">All of the Above</label>
+          </div>
+        </div>
+
+        <!-- Arthas Menethil -->
+        <div class="my-5">
+          <p class="lead font-weight-normal">4. Who was the Lich King in the Wrath of the Lich King expansion?</p>
+          <div class="form-check my-2 text-white-50">
+            <input type="radio" name="q4" value="A" checked>
+            <label class="form-check-label">Illidan Stormrage</label>
+          </div>
+          <div class="form-check my-2 text-white-50">
+            <input type="radio" name="q4" value="B">
+            <label class="form-check-label">Arthas Menethil</label>
+          </div>
+          <div class="form-check my-2 text-white-50">
+            <input type="radio" name="q4" value="C">
+            <label class="form-check-label">Thrall</label>
+          </div>
+          <div class="form-check my-2 text-white-50">
+            <input type="radio" name="q4" value="D">
+            <label class="form-check-label">Varian Wrynn</label>
+          </div>
+        </div>
+
+        <!-- Lucifron -->
+        <div class="my-5">
+          <p class="lead font-weight-normal">5. What is the first ever raid boss in World of Warcraft?</p>
+          <div class="form-check my-2 text-white-50">
+            <input type="radio" name="q5" value="A" checked>
+            <label class="form-check-label">Lucifron</label>
+          </div>
+          <div class="form-check my-2 text-white-50">
+            <input type="radio" name="q5" value="B">
+            <label class="form-check-label">Ragnaros</label>
+          </div>
+          <div class="form-check my-2 text-white-50">
+            <input type="radio" name="q5" value="C">
+            <label class="form-check-label">Onyxia</label>
+          </div>
+          <div class="form-check my-2 text-white-50">
+            <input type="radio" name="q5" value="D">
+            <label class="form-check-label">Kel'Thuzad</label>
+          </div>
+        </div>
+
+        <div class="text-left">
+          <input type="Submit" class="btn btn-light">
+        </div>
+
+      </form>
+
+    </div>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
