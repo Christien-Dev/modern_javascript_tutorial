@@ -1,21 +1,36 @@
 // Async & Await
 
+
+// The "async" function declaration creates a binding of a new asynchronous function to a given name
+// An async function will ALWAYS return a promise, even if the body of the async function is empty
+// The "await" keyword is permitted within the function body, enabling asynchronous, promise-based behavior to be written in a cleaner style and avoiding the need to explicitly configure promise chains
+
 const getTodos = async () => {
     
-    const response = await fetch('todos/todos_1.json');
-    const data = await response.json();
+    // The "await" operator is used to wait for a Promise and get its fulfillment value
+    // It can only be used inside an async function or at the top level of a module
+    
+    const response = await fetch('todos/todoss_1.json');     // returns a promise so we use await
+    console.log(response);
+    if(!response.ok){                                       // The fetch function does not automatically reject the promise for HTTP error statuses (e.g., 404, 500). 
+        throw new Error("Can't fetch the data");            // Instead, it resolves the promise regardless of the status code, leaving it up to the developer to check the response.ok property. Can add a custom message
+    }
+    const data = await response.json();                     // json.parse() returns a promise so we use await
+    return data;
+
 };
 
-const test = getTodos();
-// console.log(test);
+console.log("1");
+console.log("2");
+getTodos()
+    .then( data => console.log('Resolved: ', data))
+    .catch( err => console.log('Rejected: ', err.message));         // This can be triggered by deforming the json file
+console.log("3");
+console.log("4");
 
-// fetch('todos/todos_1.json').then( response => {
-//     console.log('Resolved: ', response);
-//     //This returns a promise, so we can tack on the .then() clause
-//     return response.json();
-// }).then( data => {
-//     console.log(data);
-// }).catch( error => {
-//     //We only get here if we get some kind of network error
-//     console.log('Rejected: ', error);
-// });
+// ~~OUTPUT~~ 
+// 1
+// 2
+// 3
+// 4
+// Resolved: -> (3) [{…}, {…}, {…}]

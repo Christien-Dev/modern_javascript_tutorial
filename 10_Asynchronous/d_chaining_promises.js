@@ -100,15 +100,15 @@ p3.catch((e) => {
 // catch() is not called if the promise is fulfilled
 
 // Create a promise which would not call onReject
-const p1 = Promise.resolve("calling next");
+const p4 = Promise.resolve("calling next");
 
-const p2 = p1.catch((reason) => {
+const p5 = p4.catch((reason) => {
   // This is never called
   console.error("catch p1!");
   console.error(reason);
 });
 
-p2.then(
+p5.then(
   (value) => {
     console.log("next promise's onFulfilled");
     console.log(value); // calling next
